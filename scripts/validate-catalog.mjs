@@ -14,6 +14,16 @@ for (const locale of ['en', 'tr']) {
 }
 
 const ids = new Set();
+const familyIds = new Set();
+for (const family of catalog.productFamilies ?? []) {
+  if (familyIds.has(family.id)) fail(`Duplicate product family id: ${family.id}`);
+  familyIds.add(family.id);
+  for (const locale of catalog.supportedLocales) {
+    if (!family.description?.[locale]) fail(`Missing ${locale} family description: ${family.id}`);
+  }
+}
+if (familyIds.size === 0) fail('At least one product family is required');
+
 for (const entry of catalog.products) {
   if (ids.has(entry.id)) fail(`Duplicate product id: ${entry.id}`);
   ids.add(entry.id);
@@ -21,6 +31,7 @@ for (const entry of catalog.products) {
   const product = await parse(manifestPath);
   if (product.id !== entry.id) fail(`Product id mismatch: ${entry.id}`);
   if (product.publisherId !== catalog.publisher.id) fail(`Publisher mismatch: ${entry.id}`);
+  if (!familyIds.has(product.familyId)) fail(`Unknown product family: ${entry.id}/${product.familyId}`);
   for (const locale of catalog.supportedLocales) {
     const relative = product.content?.[locale];
     if (!relative) fail(`Missing ${locale} content reference: ${entry.id}`);

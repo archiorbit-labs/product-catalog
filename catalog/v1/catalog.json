@@ -1,15 +1,36 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogVersion": "0.1.0",
+  "catalogVersion": "0.2.0",
   "generatedAt": "2026-09-11T00:00:00Z",
   "defaultLocale": "en",
   "supportedLocales": ["en", "tr"],
   "publisher": {
-    "id": "archiorbitlabs",
-    "name": "ArchiOrbit Labs",
-    "website": "https://archiorbitlabs.com",
+    "id": "dataiotech",
+    "name": "Dataiotech",
     "repository": "https://github.com/archiorbit-labs/product-catalog"
   },
+  "productFamilies": [
+    {
+      "id": "archiorbit",
+      "name": "ArchiOrbit",
+      "brand": "ArchiOrbit Labs",
+      "website": "https://archiorbitlabs.com",
+      "description": {
+        "en": "Platform-independent lifecycle and operations products.",
+        "tr": "Platformdan bağımsız yaşam döngüsü ve operasyon ürünleri."
+      }
+    },
+    {
+      "id": "pgarchi",
+      "name": "pgArchi",
+      "brand": "pgArchiHub",
+      "website": "https://pgarchihub.com",
+      "description": {
+        "en": "PostgreSQL-focused products and community editions.",
+        "tr": "PostgreSQL odaklı ürünler ve Community Edition sürümleri."
+      }
+    }
+  ],
   "products": [
     { "id": "archiconsole", "manifest": "products/archiconsole.json" },
     { "id": "archifabric", "manifest": "products/archifabric.json" },

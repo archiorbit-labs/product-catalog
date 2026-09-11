@@ -2,6 +2,16 @@
 
 The canonical, public metadata source used by ArchiConsole to discover ArchiOrbit Labs products, localized product descriptions, compatible releases, and trusted installation artifacts.
 
+## Catalog hierarchy
+
+The catalog distinguishes the publisher, product family, and product identities:
+
+- **Dataiotech** is the publisher.
+- **ArchiOrbit** is the platform-independent product family and includes ArchiConsole, ArchiFabric, and Lifecycle Graph Core.
+- **pgArchi** is the PostgreSQL-focused product family and includes pgArchiMigrator.
+
+Product IDs remain stable within their family. A product is added to the public catalog only when it is ready for public discovery.
+
 This repository contains metadata only. It is not an execution authority and does not contain product secrets, credentials, or mutable installation instructions.
 
 ## Stable endpoints
