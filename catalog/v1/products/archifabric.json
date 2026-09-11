@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "archifabric",
+  "name": "ArchiFabric",
+  "publisherId": "archiorbitlabs",
+  "category": "infrastructure-lifecycle",
+  "edition": "Community",
+  "availability": "preview",
+  "content": { "en": "../../../content/v1/en/products/archifabric.json", "tr": "../../../content/v1/tr/products/archifabric.json" },
+  "links": { "repository": "https://github.com/gokhandedeoglu/archifabric", "website": "https://archiorbitlabs.com" },
+  "capabilities": ["environment.topology", "desired-state", "plan", "apply", "drift.detect", "reconcile", "standalone-ui", "embedded-ui"],
+  "integrations": [{ "productId": "lifecycle-graph-core", "relationship": "recommended" }],
+  "latestRelease": { "version": "0.1.0-alpha.1", "channel": "alpha", "status": "announced", "minimumArchiConsoleVersion": "0.1.0-alpha.1", "artifacts": [] }
+}

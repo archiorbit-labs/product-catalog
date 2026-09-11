@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "pgarchimigrator",
+  "name": "pgArchiMigrator",
+  "publisherId": "archiorbitlabs",
+  "category": "postgresql-migration",
+  "edition": "Community",
+  "availability": "available",
+  "content": { "en": "../../../content/v1/en/products/pgarchimigrator.json", "tr": "../../../content/v1/tr/products/pgarchimigrator.json" },
+  "links": { "website": "https://pgarchihub.com" },
+  "capabilities": ["migration.assess", "migration.plan", "migration.execute", "migration.verify"],
+  "latestRelease": { "version": "1.0.0", "channel": "stable", "status": "announced", "minimumArchiConsoleVersion": "0.1.0-alpha.1", "artifacts": [] }
+}

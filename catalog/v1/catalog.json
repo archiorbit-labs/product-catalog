@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogVersion": "0.1.0",
+  "generatedAt": "2026-09-11T00:00:00Z",
+  "defaultLocale": "en",
+  "supportedLocales": ["en", "tr"],
+  "publisher": {
+    "id": "archiorbitlabs",
+    "name": "ArchiOrbit Labs",
+    "website": "https://archiorbitlabs.com",
+    "repository": "https://github.com/archiorbit-labs/product-catalog"
+  },
+  "products": [
+    { "id": "archiconsole", "manifest": "products/archiconsole.json" },
+    { "id": "archifabric", "manifest": "products/archifabric.json" },
+    { "id": "lifecycle-graph-core", "manifest": "products/lifecycle-graph-core.json" },
+    { "id": "pgarchimigrator", "manifest": "products/pgarchimigrator.json" }
+  ]
+}

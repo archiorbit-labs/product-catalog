@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "archiconsole",
+  "name": "ArchiConsole",
+  "publisherId": "archiorbitlabs",
+  "category": "ecosystem-management",
+  "edition": "Community",
+  "availability": "preview",
+  "content": { "en": "../../../content/v1/en/products/archiconsole.json", "tr": "../../../content/v1/tr/products/archiconsole.json" },
+  "links": { "repository": "https://github.com/gokhandedeoglu/archiconsole", "website": "https://archiorbitlabs.com" },
+  "capabilities": ["product.discovery", "product.download", "product.installation", "product.activation", "product.update", "extension.mount"],
+  "latestRelease": { "version": "0.1.0-alpha.1", "channel": "alpha", "status": "announced", "minimumArchiConsoleVersion": "0.1.0-alpha.1", "artifacts": [] }
+}

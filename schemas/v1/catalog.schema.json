@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://catalog.archiorbitlabs.com/schemas/v1/catalog.schema.json",
+  "title": "ArchiOrbit Labs Product Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "catalogVersion", "generatedAt", "defaultLocale", "supportedLocales", "publisher", "products"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "catalogVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "defaultLocale": { "type": "string" },
+    "supportedLocales": { "type": "array", "uniqueItems": true, "minItems": 1, "items": { "type": "string" } },
+    "publisher": { "type": "object", "required": ["id", "name", "website", "repository"] },
+    "products": { "type": "array", "uniqueItems": true, "items": { "type": "object", "additionalProperties": false, "required": ["id", "manifest"], "properties": { "id": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "manifest": { "type": "string", "pattern": "^products/[a-z0-9-]+\\.json$" } } }
+  }
+}

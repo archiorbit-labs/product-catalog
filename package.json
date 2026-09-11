@@ -1,0 +1,12 @@
+{
+  "name": "@archiorbitlabs/product-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Canonical metadata catalog for ArchiOrbit Labs products",
+  "scripts": {
+    "test": "node scripts/validate-catalog.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
