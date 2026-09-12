@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogVersion": "0.2.0",
-  "generatedAt": "2026-09-11T00:00:00Z",
+  "catalogVersion": "0.3.0",
+  "generatedAt": "2026-09-12T12:30:00Z",
   "defaultLocale": "en",
   "supportedLocales": ["en", "tr"],
   "publisher": {
