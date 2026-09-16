@@ -6,6 +6,15 @@ const parse = async (file) => JSON.parse(await readFile(path.join(root, file), '
 const exists = async (file) => access(path.join(root, file));
 const fail = (message) => { throw new Error(message); };
 
+const isHttpsUrl = (value) => {
+  if (typeof value !== 'string') return false;
+  try {
+    return new URL(value).protocol === 'https:';
+  } catch {
+    return false;
+  }
+};
+
 const catalog = await parse('catalog/v1/catalog.json');
 if (catalog.schemaVersion !== '1.0.0') fail('Unsupported catalog schema version');
 if (catalog.defaultLocale !== 'en') fail('English must be the default locale');
@@ -43,7 +52,14 @@ for (const entry of catalog.products) {
     if (artifact.status === 'installable') {
       if (!/^https:\/\//.test(artifact.url)) fail(`Artifact URL must be HTTPS: ${entry.id}`);
       if (!/^[a-f0-9]{64}$/.test(artifact.sha256 ?? '')) fail(`Artifact requires SHA-256: ${entry.id}`);
-      if (!artifact.signatureUrl) fail(`Artifact requires a signature: ${entry.id}`);
+      if (!isHttpsUrl(artifact.descriptorUrl))
+        fail(`Artifact requires an HTTPS signed descriptor: ${entry.id}`);
+      
+      if (!isHttpsUrl(artifact.sbomUrl))
+        fail(`Artifact requires an HTTPS SBOM: ${entry.id}`);
+      
+      if (!isHttpsUrl(artifact.provenanceUrl))
+        fail(`Artifact requires HTTPS provenance: ${entry.id}`);
     }
   }
   for (const integration of product.integrations ?? []) {
