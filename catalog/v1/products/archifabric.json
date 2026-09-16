@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
   "id": "archifabric",
   "name": "ArchiFabric",
   "publisherId": "dataiotech",
@@ -15,7 +15,7 @@
     "version": "0.1.0-alpha.2",
     "channel": "alpha",
     "status": "installable",
-    "minimumArchiConsoleVersion": "0.1.0-alpha.2",
+    "minimumArchiConsoleVersion": "0.1.0-alpha.1",
     "artifacts": [
       {
         "id": "archifabric-win32-x64",
@@ -28,7 +28,7 @@
         "sha256": "76b916e1496f6930244723f1e1833d784f5469f5753787001b19c73ac38702be",
         "descriptorUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.2/runtime-bundle-descriptor.json",
         "sbomUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.2/ArchiFabric-0.1.0-alpha.2.spdx.json",
-        "provenanceUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.2.0-alpha.2/ArchiFabric-0.1.0-alpha.2.provenance.json"
+        "provenanceUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.2/ArchiFabric-0.1.0-alpha.2.provenance.json"
       }
     ]
   }
