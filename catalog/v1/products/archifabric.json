@@ -11,25 +11,26 @@
   "links": { "repository": "https://github.com/gokhandedeoglu/archifabric", "website": "https://archiorbitlabs.com" },
   "capabilities": ["environment.topology", "desired-state", "plan", "apply", "drift.detect", "reconcile", "standalone-ui", "embedded-ui"],
   "integrations": [{ "productId": "lifecycle-graph-core", "relationship": "recommended" }],
+  
   "latestRelease": {
-    "version": "0.1.0-alpha.2",
-    "channel": "alpha",
-    "status": "installable",
-    "minimumArchiConsoleVersion": "0.1.0-alpha.1",
-    "artifacts": [
-      {
-        "id": "archifabric-win32-x64",
-        "status": "installable",
-        "platform": "win32",
-        "architecture": "x64",
-        "format": "zip",
-        "url": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.2/ArchiFabric-0.1.0-alpha.2-win32-x64.zip",
-        "size": 3502403,
-        "sha256": "76b916e1496f6930244723f1e1833d784f5469f5753787001b19c73ac38702be",
-        "descriptorUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.2/runtime-bundle-descriptor.json",
-        "sbomUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.2/ArchiFabric-0.1.0-alpha.2.spdx.json",
-        "provenanceUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.2/ArchiFabric-0.1.0-alpha.2.provenance.json"
-      }
-    ]
+  "version": "0.1.0-alpha.3",
+  "channel": "alpha",
+  "status": "installable",
+  "minimumArchiConsoleVersion": "0.1.0-alpha.1",
+  "artifacts": [
+    {
+      "id": "archifabric-win32-x64",
+      "status": "installable",
+      "platform": "win32",
+      "architecture": "x64",
+      "format": "zip",
+      "url": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.3/ArchiFabric-0.1.0-alpha.3-win32-x64.zip",
+      "size": 3503807,
+      "sha256": "6e92421670bec141cb7a9bab4151a643a8fe43d8b549c68dfe08256401fd8bf1",
+      "descriptorUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.3/runtime-bundle-descriptor.json",
+      "sbomUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.3/ArchiFabric-0.1.0-alpha.3.spdx.json",
+      "provenanceUrl": "https://github.com/archiorbit-labs/product-releases/releases/download/archifabric-v0.1.0-alpha.3/ArchiFabric-0.1.0-alpha.3.provenance.json"
+    }
+  ]
   }
 }
